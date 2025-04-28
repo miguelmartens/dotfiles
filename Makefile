@@ -13,6 +13,8 @@ help:
 	@echo "  brew-bundle      - Install packages from Brewfile"
 	@echo "  touchid          - Enable Touch ID for sudo"
 	@echo "  brew-dump        - Dump current Homebrew setup to Brewfile"
+	@echo "  cursor-extensions-export - Export cursor extensions"
+	@echo "  cursor-extensions-restore - Restore cursor extensions"
 
 .PHONY: stow-all
 stow-all:
@@ -38,5 +40,13 @@ touchid:
 .PHONY: brew-dump
 brew-dump:
 	brew bundle dump --file=$(DOTFILES)/Brewfile --force
+
+.PHONY: cursor-extensions-export
+cursor-extensions-export:
+	cursor --list-extensions > $(DOTFILES)/cursor/.cursor/extensions.list
+
+.PHONY: cursor-extensions-restore
+cursor-extensions-restore:
+	cat $(DOTFILES)/cursor/.cursor/extensions.list | xargs -L 1 cursor --install-extension
 
 

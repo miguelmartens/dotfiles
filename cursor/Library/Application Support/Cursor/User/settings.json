@@ -1,0 +1,21 @@
+{
+    "window.commandCenter": true,
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.iconTheme": "catppuccin-frappe",
+    "workbench.colorTheme": "Catppuccin Frappé",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.orientation": "vertical",
+    "editor.minimap.enabled": true,
+    "editor.wordWrap": "on",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "phase",
+    "workbench.colorCustomizations": {},
+    "git.autofetch": true,
+    "git.confirmSync": false
+}

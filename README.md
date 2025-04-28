@@ -42,6 +42,26 @@ This will regenerate the Brewfile to match your current Homebrew setup.
 
 ---
 
+## Exporting and Restoring Cursor Extensions
+
+You can back up and restore your Cursor (VS Code) extensions using the following Makefile targets:
+
+To export your currently installed extensions to `.dotfiles/cursor/.cursor/extensions.list`:
+
+```sh
+make cursor-extensions-export
+```
+
+To restore all extensions from `.dotfiles/cursor/.cursor/extensions.list`:
+
+```sh
+make cursor-extensions-restore
+```
+
+This will use `cursor --list-extensions` to export, and `cursor --install-extension` to restore from the list. The `extensions.list` file is tracked in this repo for easy backup and migration.
+
+---
+
 ## Directory Structure
 
 Each application or config is organized as a separate "package" (directory) inside `.dotfiles/`. The internal structure of each package mirrors the desired location in your home directory. For example:
