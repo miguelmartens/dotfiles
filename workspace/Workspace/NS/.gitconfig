@@ -1,0 +1,9 @@
+# ===== LOCAL CONFIGURATION =====
+
+# Overrides global user identity for this specific directory
+# Use this configuration for all repositories under ~/Workspace/Projects/
+[user]
+    name = miguelmartens-ns
+    email = miguel.martens@nslogin.nl
+
+# ===== END OF LOCAL CONFIGURATION =====

@@ -1,0 +1,8 @@
+--ignore=vial
+--ignore=.gitignore
+--ignore=.stowrc
+--ignore=DS_Store
+--ignore=Brewfile
+--ignore=Brewfile.lock.json
+--ignore=Makefile
+--ignore=README.md

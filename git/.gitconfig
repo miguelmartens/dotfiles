@@ -1,0 +1,56 @@
+# ===== GLOBAL CONFIGURATION =====
+
+# Default user identity (global scope)
+# Used if no directory-specific configurations override it
+[user]
+    name = miguelmartens
+    email = mail@miguelmartens.com
+
+# Directory-specific configurations (global include rules)
+# Custom configurations for specific directories override the global settings
+[includeIf "gitdir:~/Workspace/Projects/"]
+    # Applies settings from ~/Workspace/Projects/.gitconfig
+    path = ~/Workspace/Projects/.gitconfig
+
+[includeIf "gitdir:~/Workspace/Cegeka/"]
+    # Applies settings from ~/Workspace/Cegeka/.gitconfig
+    path = ~/Workspace/Cegeka/.gitconfig
+
+[includeIf "gitdir:~/Workspace/NS/"]
+    # Applies settings from ~/Workspace/NS/.gitconfig
+    path = ~/Workspace/NS/.gitconfig
+
+# Default branch name for new repositories (global setting)
+# Ensures that 'main' is used instead of 'master'
+[init]
+    defaultBranch = main
+
+# Git LFS (Large File Storage) settings (global scope)
+# These settings are required for handling large files efficiently across all repositories
+[filter "lfs"]
+    clean = git-lfs clean -- %f    # Command to clean large files
+    smudge = git-lfs smudge -- %f  # Command to restore large files
+    process = git-lfs filter-process
+    required = true
+
+# Global commit signing settings
+# Ensures that commits are signed with a GPG key for verification
+# [commit]
+#     gpgSign = true
+
+# Global editor for writing commit messages
+# Opens Visual Studio Code and waits until the editor is closed
+[core]
+    editor = code --wait
+
+# Global pull behavior
+# Ensures that pull uses merge instead of rebase (can be customized per project)
+[pull]
+    rebase = false
+
+# Optional: Global line ending settings (useful for cross-platform projects)
+# Converts line endings to Unix (LF) in repositories and Windows-style (CRLF) locally
+[core]
+    autocrlf = true
+
+# ===== END OF GLOBAL CONFIGURATION =====
