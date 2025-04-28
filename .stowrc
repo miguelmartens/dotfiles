@@ -1,4 +1,3 @@
---ignore=vial
 --ignore=.gitignore
 --ignore=.stowrc
 --ignore=DS_Store
