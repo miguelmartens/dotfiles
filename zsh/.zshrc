@@ -156,10 +156,20 @@ eval "$(atuin init zsh)"             # Atuin history manager
 # -------------------------------
 # Go Programming Language Setup
 # -------------------------------
-export GOROOT="$(brew --prefix golang)/libexec"
-export GOPATH="$HOME/go"             # Set Go workspace (optional)
-# export GOBIN="$GOPATH/bin"         # Optional Go binaries path
-export PATH="$(brew --prefix golang)/libexec/bin:$GOPATH/bin:$PATH"
+# 1. Optional: override GOPATH (defaults to $HOME/go)
+export GOPATH="$HOME/go"                             # Go workspace
+
+# 2. Don’t set GOROOT; let Go detect it
+# export GOROOT="$(brew --prefix go)/libexec"       # Not needed
+
+# 3. PATH updates
+export PATH="$(brew --prefix go)/libexec/bin:$PATH"  # Homebrew’s Go toolchain
+export PATH="$GOPATH/bin:$PATH"                      # Go workspace binaries
+
+# 4. (Optional) New Go 1.24+ environment variables
+# export GOAUTH="…"                                    # Private module auth
+# export GOFIPS140="…"                                # FIPS 140-3 module version
+# export GODEBUG="…"                                  # Toolchain runtime tweaks
 
 # Golang Aliases
 alias gob="go build"       # Build the current package
@@ -190,5 +200,8 @@ export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 # Rustup
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# bun completions
-[ -s "/Users/miguelm/.bun/_bun" ] && source "/Users/miguelm/.bun/_bun"
+# -------------------------------
+# Bun Setup
+# -------------------------------
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -49,4 +49,6 @@ cursor-extensions-export:
 cursor-extensions-restore:
 	cat $(DOTFILES)/cursor/.cursor/extensions.list | xargs -L 1 cursor --install-extension
 
-
+.PHONY: go-workspace
+go-workspace:
+	mkdir -p "$(GOPATH)"/{bin,pkg,src}
