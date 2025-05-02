@@ -173,6 +173,22 @@ git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-
 pyenv update
 ```
 
+## Restarting Aerospace, Sketchybar, and Borders
+
+When making changes to your configuration for [Aerospace](https://aerospace.app/), [Sketchybar](https://github.com/FelixKratz/SketchyBar), or [Borders](https://github.com/FelixKratz/JankyBorders), you may need to kill and restart their processes to apply updates.
+
+You can quickly kill all three processes with:
+
+```sh
+pkill Aerospace sketchybar borders
+```
+
+This will terminate all running instances of Aerospace, sketchybar, and borders. You can then relaunch them as needed to test your changes.
+
+- To start Aerospace: `open -a Aerospace`
+- To start Sketchybar: `open -a sketchybar`
+- To start Borders: `open -a borders`
+
 ---
 
 ## Adding New Dotfiles

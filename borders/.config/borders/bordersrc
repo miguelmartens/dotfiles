@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Colors taken from Catppuccin Frappé theme
+red="0xffe78284" # Color Red: #e78284
+blue="0xff8caaee" # Color Blue: #8caaee
+
+options=(
+	active_color="$red"
+	inactive_color="$blue"
+	hidpi=on
+	style=round
+	width=6.0
+)
+
+borders "${options[@]}"

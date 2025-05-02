@@ -1,19 +1,23 @@
 k9s:
   liveViewAutoRefresh: false
-  screenDumpDir: /Users/miguelm/Library/Application Support/k9s/screen-dumps
+  screenDumpDir: /Users/miguelm/.config/k9s/screen-dumps
   refreshRate: 2
+  apiServerTimeout: 15s
   maxConnRetry: 5
   readOnly: false
   noExitOnCtrlC: false
+  portForwardAddress: localhost
   ui:
     skin: catppuccin-frappe
     enableMouse: false
     headless: false
     logoless: false
     crumbsless: false
+    splashless: false
     reactive: false
     noIcons: false
     defaultsToFullScreen: false
+    useFullGVRTitle: false
   skipLatestRevCheck: false
   disablePodCounting: false
   shellPod:
@@ -32,6 +36,7 @@ k9s:
     buffer: 5000
     sinceSeconds: -1
     textWrap: false
+    disableAutoscroll: false
     showTime: false
   thresholds:
     cpu:
@@ -40,3 +45,4 @@ k9s:
     memory:
       critical: 90
       warn: 70
+  defaultView: ""

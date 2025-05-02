@@ -17,5 +17,6 @@
     "editor.cursorBlinking": "phase",
     "workbench.colorCustomizations": {},
     "git.autofetch": true,
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "editor.fontFamily": "Hack Nerd Font"
 }

@@ -99,6 +99,10 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # -------------------------------
+# k9s
+export K9S_CONFIG_DIR="$HOME/.config/k9s"
+
+# -------------------------------
 # Aliases
 # -------------------------------
 #alias cat='bat'                      # Use bat for syntax-highlighted cat

@@ -1,0 +1,12 @@
+k9s:
+  cluster: AKS20LOCO100-TA
+  namespace:
+    active: default
+    lockFavorites: false
+    favorites:
+      - default
+  view:
+    active: po
+  featureGates:
+    nodeShell: false
+  proxy: null
