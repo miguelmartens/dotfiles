@@ -1,25 +1,36 @@
+-- Pull the WezTerm API
 local wezterm = require 'wezterm'
 
-local config = wezterm.config_builder()
+-- Initialize actual config
+local config = {}
+if wezterm.config_builder then
+  config = wezterm.config_builder()
+end
 
-config = {
-  automatically_reload_config = true,
+-- General
+config.automatically_reload_config = true
 
-  window_close_confirmation = "NeverPrompt",
-  window_decorations = "RESIZE",
+-- Appearance
+config.font = wezterm.font("Hack Nerd Font", { weight = 'Bold', italic = false })
+config.font_size = 14.0
+config.color_scheme = "Catppuccin Frappe"
+config.default_cursor_style = "BlinkingBar"
 
-  use_fancy_tab_bar = true,
-  enable_tab_bar = true,
-  window_frame = {
-    font_size = 12.0,
-    font = wezterm.font("Hack Nerd Font", { weight = 'Bold', italic = false }),
-  },
-  default_cursor_style = "BlinkingBar",
-  color_scheme = "Catppuccin Frappe",
+-- Window
+config.window_decorations = "RESIZE"
+config.window_background_opacity = 0.9
+config.window_close_confirmation = "NeverPrompt"
+config.window_frame = {
+  font_size = 12.0,
   font = wezterm.font("Hack Nerd Font", { weight = 'Bold', italic = false }),
-  font_size = 18.0,
-  color_scheme = "Catppuccin Frappe",
-  window_background_opacity = 0.9,
 }
 
+-- Tab Bar
+config.use_fancy_tab_bar = true
+config.enable_tab_bar = true
+config.tab_bar_at_bottom = false
+config.hide_tab_bar_if_only_one_tab = true
+config.native_macos_fullscreen_mode = false
+
+-- Return config to WezTerm
 return config
