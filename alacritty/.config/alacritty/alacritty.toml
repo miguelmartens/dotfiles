@@ -25,6 +25,10 @@ size = 18
 family = "Hack Nerd Font"
 style = "Bold"
 
+[font.bold_italic]
+family = "Hack Nerd Font"
+style = "Heavy Italic"
+
 [font.glyph_offset]
 x = 0
 y = 0
@@ -55,9 +59,12 @@ program = "/bin/zsh"
 
 [window]
 option_as_alt = "Both"
-decorations = "full"
+decorations = "Buttonless"
 dynamic_title = true
-startup_mode = "Maximized"
+dynamic_padding = false
+startup_mode = "Windowed"
+opacity = 0.9
+blur = true
 
 [window.dimensions]
 columns = 160
@@ -71,11 +78,7 @@ y = 4
 
 live_config_reload = true
 import = [
-  # uncomment the flavour you want below:
-  # "~/.config/alacritty/catppuccin-latte.toml"
   "~/.config/alacritty/catppuccin-frappe.toml"
-  # "~/.config/alacritty/catppuccin-macchiato.toml"
-  # "~/.config/alacritty/catppuccin-mocha.toml"
 ]
 
 [terminal]
