@@ -1,12 +1,14 @@
 k9s:
   cluster: AKS20LOCO100-P
   namespace:
-    active: default
+    active: ns20ccmportal100-p
     lockFavorites: false
     favorites:
+      - ns20rw100-p
+      - ns20ccmportal100-p
       - default
   view:
-    active: po
+    active: deploy
   featureGates:
     nodeShell: false
   proxy: null
