@@ -1,13 +1,14 @@
 k9s:
   cluster: AKS20LOCO100-TA
   namespace:
-    active: ns20ccmportal100-ta
+    active: ns20hijr100-ta
     lockFavorites: false
     favorites:
+      - ns20hijr100-ta
       - ns20ccmportal100-ta
       - default
   view:
-    active: context
+    active: operatorconfiguration
   featureGates:
     nodeShell: false
   proxy: null

@@ -8,7 +8,7 @@ k9s:
       - ns20ccmportal100-p
       - default
   view:
-    active: deploy
+    active: svc
   featureGates:
     nodeShell: false
   proxy: null

@@ -621,7 +621,7 @@
         // Default width of the notification panel.
         "default_width": 380
     },
-    "agent": {
+    "assistant": {
         // Version of this setting.
         "version": "2",
         // Whether the assistant is enabled.
@@ -661,9 +661,9 @@
                     "fetch": true,
                     "list_directory": false,
                     "now": true,
-                    "find_path": true,
+                    "path_search": true,
                     "read_file": true,
-                    "grep": true,
+                    "regex_search": true,
                     "thinking": true
                 }
             },
@@ -678,14 +678,14 @@
                     "create_file": true,
                     "delete_path": false,
                     "diagnostics": true,
-                    "edit_file": true,
+                    "find_replace_file": true,
                     "fetch": true,
                     "list_directory": false,
                     "move_path": false,
                     "now": true,
-                    "find_path": true,
+                    "path_search": true,
                     "read_file": true,
-                    "grep": true,
+                    "regex_search": true,
                     "symbol_info": true,
                     "thinking": true
                 }
@@ -988,7 +988,7 @@
         "mode": "subtle",
         // Whether edit predictions are enabled in the assistant panel.
         // This setting has no effect if globally disabled.
-        "enabled_in_text_threads": true
+        "enabled_in_assistant": true
     },
     // Settings specific to journaling
     "journal": {
