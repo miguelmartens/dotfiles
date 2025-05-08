@@ -200,5 +200,5 @@ shift-down = ['volume set 0', 'mode main']
     1 = ['main', 'built-in']
     2 = ['main', 'built-in']
     3 = ['main', 'built-in']
-    4 = 1 # HX Armada 25 (2)
-    5 = 3 # HX Armada 25 (1)
+    4 = [1, 'HX Armada 25 (2)', 'secondary']
+    5 = [3, 'HX Armada 25 (1)', 'secondary']
