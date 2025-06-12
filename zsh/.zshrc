@@ -129,6 +129,15 @@ alias renovate='renovate --platform=local'
 alias rgrep='rg'
 
 # -------------------------------
+# Shell Integrations and Completions
+# -------------------------------
+eval "$(fzf --zsh)"                  # FZF fuzzy finder
+eval "$(zoxide init --cmd cd zsh)"   # Zoxide initialization
+eval "$(thefuck --alias)"            # TheFuck command fixer
+source <(kubectl completion zsh)     # Kubectl completions
+eval "$(atuin init zsh)"             # Atuin history manager
+
+# -------------------------------
 # Git & GitHub Setup
 # -------------------------------
 alias g='git'
@@ -148,14 +157,15 @@ alias docker='podman'
 # --------------------------------
 export PATH="$HOME/.bun/bin:$PATH"   # Bun package manager
 
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
 # -------------------------------
-# Shell Integrations and Completions
+# Bun Setup
 # -------------------------------
-eval "$(fzf --zsh)"                  # FZF fuzzy finder
-eval "$(zoxide init --cmd cd zsh)"   # Zoxide initialization
-eval "$(thefuck --alias)"            # TheFuck command fixer
-source <(kubectl completion zsh)     # Kubectl completions
-eval "$(atuin init zsh)"             # Atuin history manager
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # -------------------------------
 # Go Programming Language Setup
@@ -201,11 +211,8 @@ alias pipfile="pipenv install"      # Install from Pipenv's Pipfile
 alias pyclean="find . -name '__pycache__' -delete"  # Clean Python caches
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 
+# -------------------------------
+# Rustup Setup
+# -------------------------------
 # Rustup
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# -------------------------------
-# Bun Setup
-# -------------------------------
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"

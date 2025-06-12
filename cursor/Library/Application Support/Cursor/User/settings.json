@@ -18,5 +18,7 @@
     "workbench.colorCustomizations": {},
     "git.autofetch": true,
     "git.confirmSync": false,
-    "editor.fontFamily": "Hack Nerd Font"
+    "editor.fontFamily": "Hack Nerd Font",
+    "makefile.configureOnOpen": true,
+    "docker.extension.enableComposeLanguageServer": false
 }

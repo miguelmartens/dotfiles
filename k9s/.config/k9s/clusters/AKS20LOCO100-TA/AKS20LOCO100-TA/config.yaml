@@ -1,14 +1,20 @@
 k9s:
   cluster: AKS20LOCO100-TA
   namespace:
-    active: ns20hijr100-ta
+    active: ns20ccmportal100-ta
     lockFavorites: false
     favorites:
-      - ns20hijr100-ta
+      - ns20svfres100-ta
       - ns20ccmportal100-ta
-      - default
+      - maglev-operations
+      - maglev-operator
+      - ns20spot100-ta
+      - maglev-privateagent
+      - nsco-monitoring
+      - maglev-monitoring
+      - ns20mas100-ta
   view:
-    active: operatorconfiguration
+    active: v1/pods
   featureGates:
     nodeShell: false
   proxy: null

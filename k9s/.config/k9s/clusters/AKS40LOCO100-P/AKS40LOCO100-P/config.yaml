@@ -1,9 +1,11 @@
 k9s:
   cluster: AKS40LOCO100-P
   namespace:
-    active: default
+    active: nsco-monitoring
     lockFavorites: false
     favorites:
+      - nsco-agic
+      - nsco-monitoring
       - default
   view:
     active: context

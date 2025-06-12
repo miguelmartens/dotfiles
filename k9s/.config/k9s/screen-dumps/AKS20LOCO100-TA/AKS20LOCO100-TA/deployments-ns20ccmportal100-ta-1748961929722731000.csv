@@ -1,0 +1,8 @@
+NAMESPACE,NAME,VS,READY,UP-TO-DATE,AVAILABLE,LABELS,VALID,AGE
+ns20ccmportal100-ta,maglevportal-api-a,0,1/1,1,1,"app=maglevportal,containertype=api,environment=a",,26d
+ns20ccmportal100-ta,maglevportal-api-t,0,1/1,1,1,"app=maglevportal,containertype=api,environment=t",,49d
+ns20ccmportal100-ta,maglevportal-frontend-a,0,1/1,1,1,"app=maglevportal,containertype=frontend,environment=a",,26d
+ns20ccmportal100-ta,maglevportal-frontend-t,0,1/1,1,1,"app=maglevportal,containertype=frontend,environment=t",,47d
+ns20ccmportal100-ta,start-service-now-polling-test-deployment,0,0/0,0,0,"app=start-service-now-polling,env=test",,23h
+ns20ccmportal100-ta,devops-message-processor-test-deployment,0,0/0,0,0,"app=devops-message-processor,env=test",,23h
+ns20ccmportal100-ta,devops-pipeline-processor-test-deployment,0,0/0,0,0,"app=devops-pipeline-processor,env=test",,23h
