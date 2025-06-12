@@ -153,17 +153,13 @@ export PODMAN_COMPOSE_PROVIDER=podman-compose
 alias docker='podman'
 
 # ---------------------------------
-# JavaScript and Node.js Setup
+# JavaScript, Node.js, NVM and Bun Setup
 # --------------------------------
-export PATH="$HOME/.bun/bin:$PATH"   # Bun package manager
-
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
-# -------------------------------
-# Bun Setup
-# -------------------------------
+export PATH="$HOME/.bun/bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
