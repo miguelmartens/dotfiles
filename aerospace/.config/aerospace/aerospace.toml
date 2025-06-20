@@ -171,7 +171,8 @@ alt-f = 'exec-and-forget open -a /Applications/Finder.app'
 alt-m = 'exec-and-forget open -a /Applications/Spotify.app'
 alt-o = 'exec-and-forget open -a /Applications/Obsidian.app'
 alt-s = 'exec-and-forget open -a /Applications/Slack.app'
-alt-t = 'exec-and-forget open -a /Applications/Alacritty.app'
+alt-t = 'exec-and-forget open -a /Applications/Wezterm.app'
+alt-z = 'exec-and-forget open -a /Applications/Zed.app'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
