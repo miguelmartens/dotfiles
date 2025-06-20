@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Colors taken from Catppuccin Frappé theme
-red="0xffe78284" # Color Red: #e78284
-blue="0xff8caaee" # Color Blue: #8caaee
+# Colors taken from Catppuccin Mocha theme
+red="0xfff38ba8" # Color Red: #f38ba8
+blue="0xff89b4fa" # Color Blue: #89b4fa
 
 options=(
 	active_color="$red"
