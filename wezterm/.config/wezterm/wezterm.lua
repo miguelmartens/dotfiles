@@ -9,7 +9,7 @@ end
 
 function scheme_for_appearance(appearance)
   if appearance:find "Dark" then
-    return "Catppuccin Frappe"
+    return "Catppuccin Mocha"
   else
     return "Catppuccin Latte"
   end
@@ -36,8 +36,8 @@ config.window_close_confirmation = "NeverPrompt"
 config.window_frame = {
   font_size = 12.0,
   font = wezterm.font("Hack Nerd Font", { weight = 'Bold', italic = false }),
-  active_titlebar_bg = "#303446", -- Catppuccin Frappe base
-  inactive_titlebar_bg = "#232634", -- Catppuccin Frappe mantle
+  active_titlebar_bg = "#1e1e2e", -- Catppuccin Mocha base
+  inactive_titlebar_bg = "#181825", -- Catppuccin Mocha mantle
 }
 config.window_padding = {
   left = 2,
@@ -55,14 +55,14 @@ config.native_macos_fullscreen_mode = false
 config.tab_max_width = 25
 config.colors = {
   tab_bar = {
-    background = "#232634", -- Catppuccin Frappe mantle
+    background = "#181825", -- Catppuccin Mocha mantle
     active_tab = {
-      bg_color = "#303446", -- Catppuccin Frappe base
-      fg_color = "#c6d0f5", -- Catppuccin Frappe text
+      bg_color = "#1e1e2e", -- Catppuccin Mocha base
+      fg_color = "#cdd6f4", -- Catppuccin Mocha text
     },
     inactive_tab = {
-      bg_color = "#232634", -- Catppuccin Frappe mantle
-      fg_color = "#a5adce", -- Catppuccin Frappe subtext0
+      bg_color = "#181825", -- Catppuccin Mocha mantle
+      fg_color = "#a6adc8", -- Catppuccin Mocha subtext0
     },
   },
 }

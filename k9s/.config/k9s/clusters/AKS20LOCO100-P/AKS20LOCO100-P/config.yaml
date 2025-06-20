@@ -1,9 +1,11 @@
 k9s:
   cluster: AKS20LOCO100-P
   namespace:
-    active: ns20svfres100-p
+    active: ns20mcm100-p
     lockFavorites: false
     favorites:
+      - ns20mcm100-p
+      - ns20ccmportal100-p
       - ns20svfres100-p
       - kube-system
       - maglev-operations
@@ -11,10 +13,8 @@ k9s:
       - ns20locot100-p
       - ns20baas100-p
       - nsco-agic
-      - all
-      - ns20mvm100-p
   view:
-    active: v1/pods
+    active: pod ns20mcm100-p
   featureGates:
     nodeShell: false
   proxy: null

@@ -16,9 +16,9 @@
     "theme": {
         "mode": "system",
         "light": "Catppuccin Mocha",
-        "dark": "Catppuccin Frappé"
+        "dark": "Catppuccin Mocha"
     },
-    "icon_theme": "Catppuccin Frappé",
+    "icon_theme": "Catppuccin Mocha",
     // The name of a base set of key bindings to use.
     // This setting can take six values, each named after another
     // text editor:

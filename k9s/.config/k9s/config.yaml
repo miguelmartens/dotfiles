@@ -8,7 +8,7 @@ k9s:
   noExitOnCtrlC: false
   portForwardAddress: localhost
   ui:
-    skin: catppuccin-frappe
+    skin: catppuccin-mocha
     enableMouse: false
     headless: false
     logoless: false
