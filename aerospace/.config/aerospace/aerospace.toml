@@ -16,7 +16,7 @@ after-startup-command = [
   # 'exec-and-forget sketchybar',
   # JankyBorders has a built-in detection of already running process,
   # so it won't be run twice on AeroSpace restart
-  'exec-and-forget borders active_color=0xffe78284 inactive_color=0xff8caaee width=6.0'
+  'exec-and-forget borders active_color=0xffe78284 inactive_color=0xff8caaee width=6.0',
 ]
 
 # Notify Sketchybar about workspace change
@@ -159,9 +159,9 @@ alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
 alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
-alt-tab = 'workspace-back-and-forth'
+# alt-backspace = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+# alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
@@ -197,8 +197,8 @@ up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
 
 [workspace-to-monitor-force-assignment]
-    1 = ['main', 'built-in']
-    2 = ['main', 'built-in']
-    3 = ['main', 'built-in']
-    4 = [1, 'HX Armada 25 (2)', 'secondary']
-    5 = [3, 'HX Armada 25 (1)', 'secondary']
+1 = ['main', 'built-in']
+2 = ['main', 'built-in']
+3 = ['main', 'built-in']
+4 = [1, 'HX Armada 25 (2)', 'secondary']
+5 = [3, 'HX Armada 25 (1)', 'secondary']
