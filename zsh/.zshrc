@@ -1,4 +1,3 @@
-
 # -------------------------------
 # Homebrew Setup
 # -------------------------------
@@ -169,11 +168,11 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # 1. Optional: override GOPATH (defaults to $HOME/go)
 export GOPATH="$HOME/go"                             # Go workspace
 
-# 2. Don’t set GOROOT; let Go detect it
+# 2. Don't set GOROOT; let Go detect it
 # export GOROOT="$(brew --prefix go)/libexec"       # Not needed
 
 # 3. PATH updates
-export PATH="$(brew --prefix go)/libexec/bin:$PATH"  # Homebrew’s Go toolchain
+export PATH="$(brew --prefix go)/libexec/bin:$PATH"  # Homebrew's Go toolchain
 export PATH="$GOPATH/bin:$PATH"                      # Go workspace binaries
 
 # 4. (Optional) New Go 1.24+ environment variables
@@ -212,3 +211,10 @@ export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 # -------------------------------
 # Rustup
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# -------------------------------
+# LLVM Setup (Homebrew)
+# -------------------------------
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"

@@ -1,8 +1,8 @@
 {
     "window.commandCenter": true,
     "git.openRepositoryInParentFolders": "never",
-    "workbench.iconTheme": "catppuccin-frappe",
-    "workbench.colorTheme": "Catppuccin Frappé",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.colorTheme": "Catppuccin Mocha",
     "github.copilot.enable": {
         "*": false,
         "plaintext": false,
