@@ -1,15 +1,12 @@
 k9s:
-  cluster: AKS40LOCO100-P
+  cluster: helios
   namespace:
-    active: nsco-agic
+    active: default
     lockFavorites: false
     favorites:
-      - ns40loco100-p
-      - nsco-agic
-      - nsco-monitoring
       - default
   view:
-    active: context
+    active: contexts
   featureGates:
     nodeShell: false
   proxy: null

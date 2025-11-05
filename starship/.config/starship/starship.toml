@@ -1,77 +1,253 @@
-# Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Inserts a blank line between shell prompts
-add_newline = false
+format = """
+[](surface1)\
+$os\
+$username\
+[](bg:sapphire fg:surface1)\
+$directory\
+[](bg:yellow fg:sapphire)\
+$git_branch\
+$git_status\
+[](fg:yellow bg:overlay1)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+$crystal\
+$lua\
+$terraform\
+[](fg:overlay1 bg:teal)\
+$azure\
+$aws\
+$kubernetes\
+$helm\
+$opa\
+$conda\
+[](fg:teal bg:surface2)\
+$time\
+[ ](fg:surface2)\
+$cmd_duration\
+$line_break\
+$character"""
 
-# A minimal left prompt
-format = """$directory$character"""
-palette = "catppuccin_mocha"
-# move the rest of the prompt to the right
-right_format = """$all"""
-command_timeout = 1000
+palette = 'catppuccin_mocha'
 
-[azure]
+[os]
 disabled = false
-format = 'on [$symbol($subscription)](#007FFF) '
+style = "bg:surface1 fg:crust"
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:surface1 fg:crust"
+style_root = "bg:surface1 fg:crust"
+format = '[ $user]($style)'
+
+[directory]
+style = "bg:sapphire fg:crust"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:yellow"
+format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
+
+[git_status]
+style = "bg:yellow"
+format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:overlay1"
+format = '[[ $symbol( $version) ](fg:crust bg:overlay1)]($style)'
+
+[c]
+symbol = " "
+style = "bg:overlay1"
+format = '[[ $symbol( $version) ](fg:crust bg:overlay1)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:overlay1"
+format = '[[ $symbol( $version) ](fg:crust bg:overlay1)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:overlay1"
+format = '[[ $symbol( $version) ](fg:crust bg:overlay1)]($style)'
+
+[php]
+symbol = ""
+style = "bg:overlay1"
+format = '[[ $symbol( $version) ](fg:crust bg:overlay1)]($style)'
+
+[java]
+symbol = " "
+style = "bg:overlay1"
+format = '[[ $symbol( $version) ](fg:crust bg:overlay1)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:overlay1"
+format = '[[ $symbol( $version) ](fg:crust bg:overlay1)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:overlay1"
+format = '[[ $symbol( $version) ](fg:crust bg:overlay1)]($style)'
+
+[python]
+symbol = ""
+style = "bg:overlay1"
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:overlay1)]($style)'
 
 [crystal]
 disabled = false
-format = '[$symbol($version)]($style)'
+symbol = ""
+style = "bg:overlay1"
+format = '[[ $symbol( $version) ](fg:crust bg:overlay1)]($style)'
+
+[lua]
+disabled = false
+symbol = ""
+style = "bg:overlay1"
+format = '[[ $symbol( $version) ](fg:crust bg:overlay1)]($style)'
+
+[terraform]
+style = "bg:overlay1"
+format = '[[ $symbol( $version) ](fg:crust bg:overlay1)]($style)'
+
+[azure]
+disabled = false
+style = "bg:teal"
+format = '[[ $symbol( $subscription) ](fg:crust bg:teal)]($style)'
+
+[aws]
+disabled = false
+symbol = ""
+style = "bg:teal"
+format = '[[ $symbol( $profile)( \($region\)) ](fg:crust bg:teal)]($style)'
+
+[kubernetes]
+disabled = false
+symbol = "☸"
+style = "bg:teal"
+format = '[[ $symbol( $context)( \($namespace\)) ](fg:crust bg:teal)]($style)'
+
+[helm]
+disabled = false
+symbol = "⎈"
+style = "bg:teal"
+format = '[[ $symbol( $version) ](fg:crust bg:teal)]($style)'
+
+[opa]
+disabled = false
+symbol = "󰎙"
+style = "bg:teal"
+format = '[[ $symbol( $version) ](fg:crust bg:teal)]($style)'
 
 [docker_context]
 disabled = false
+symbol = ""
+style = "bg:teal"
+format = '[[ $symbol( $context) ](fg:crust bg:teal)]($style)'
 
-[git_branch]
+[conda]
 disabled = false
-format = '[$symbol$branch(:$remote_branch)](#F05032) '
+symbol = "  "
+style = "fg:crust bg:teal"
+format = '[$symbol$environment ]($style)'
+ignore_base = false
 
-[golang]
+[time]
 disabled = false
-detect_extensions = ["go", "mod", "sum"]
-format = '[ $version](#00ADD8) '
+time_format = "%R"
+style = "bg:surface2"
+format = '[[  $time ](fg:crust bg:surface2)]($style)'
 
-[kubernetes]
-symbol = '☸ '
+[line_break]
 disabled = false
-format = '[$symbol$context( \($namespace\))](#326CE5) '
 
-[nix_shell]
-disabled = true
-
-[python]
+[character]
 disabled = false
-detect_extensions = ["py"]
-format = '[ $symbol$version ](#3776AB)'
+success_symbol = '[❯](bold fg:green)'
+error_symbol = '[❯](bold fg:red)'
+vimcmd_symbol = '[❮](bold fg:text)'
+vimcmd_replace_one_symbol = '[❮](bold fg:overlay2)'
+vimcmd_replace_symbol = '[❮](bold fg:overlay2)'
+vimcmd_visual_symbol = '[❮](bold fg:overlay1)'
 
-# Palette definitions
-[palettes.catppuccin_latte]
-rosewater = "#dc8a78"
-flamingo = "#dd7878"
-pink = "#ea76cb"
-mauve = "#8839ef"
-red = "#d20f39"
-maroon = "#e64553"
-peach = "#fe640b"
-yellow = "#df8e1d"
-green = "#40a02b"
-teal = "#179299"
-sky = "#04a5e5"
-sapphire = "#209fb5"
-blue = "#1e66f5"
-lavender = "#7287fd"
-text = "#4c4f69"
-subtext1 = "#5c5f77"
-subtext0 = "#6c6f85"
-overlay2 = "#7c7f93"
-overlay1 = "#8c8fa1"
-overlay0 = "#9ca0b0"
-surface2 = "#acb0be"
-surface1 = "#bcc0cc"
-surface0 = "#ccd0da"
-base = "#eff1f5"
-mantle = "#e6e9ef"
-crust = "#dce0e8"
+[cmd_duration]
+show_milliseconds = true
+format = " in $duration "
+style = "bg:surface2"
+disabled = false
+show_notifications = true
+min_time_to_notify = 45000
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
 
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"
@@ -101,6 +277,34 @@ base = "#303446"
 mantle = "#292c3c"
 crust = "#232634"
 
+[palettes.catppuccin_latte]
+rosewater = "#dc8a78"
+flamingo = "#dd7878"
+pink = "#ea76cb"
+mauve = "#8839ef"
+red = "#d20f39"
+maroon = "#e64553"
+peach = "#fe640b"
+yellow = "#df8e1d"
+green = "#40a02b"
+teal = "#179299"
+sky = "#04a5e5"
+sapphire = "#209fb5"
+blue = "#1e66f5"
+lavender = "#7287fd"
+text = "#4c4f69"
+subtext1 = "#5c5f77"
+subtext0 = "#6c6f85"
+overlay2 = "#7c7f93"
+overlay1 = "#8c8fa1"
+overlay0 = "#9ca0b0"
+surface2 = "#acb0be"
+surface1 = "#bcc0cc"
+surface0 = "#ccd0da"
+base = "#eff1f5"
+mantle = "#e6e9ef"
+crust = "#dce0e8"
+
 [palettes.catppuccin_macchiato]
 rosewater = "#f4dbd6"
 flamingo = "#f0c6c6"
@@ -128,31 +332,3 @@ surface0 = "#363a4f"
 base = "#24273a"
 mantle = "#1e2030"
 crust = "#181926"
-
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"

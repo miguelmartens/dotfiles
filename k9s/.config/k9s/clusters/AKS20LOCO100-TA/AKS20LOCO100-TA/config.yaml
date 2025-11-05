@@ -1,20 +1,20 @@
 k9s:
   cluster: AKS20LOCO100-TA
   namespace:
-    active: ns20mcm100-ta
+    active: maglev-privateagent
     lockFavorites: false
     favorites:
-      - ns20hijr100-ta
-      - maglev-privateagent
-      - ns20loco100-ta
-      - ns20spel100-ta
-      - ns20bamash100-ta
+      - maglev-monitoring
+      - ns20spot100-ta
+      - nsco-monitoring
+      - maglev-operator
+      - ns20pret100-ta
       - all
-      - ns20mcm100-ta
-      - ns20locot100-ta
-      - ns20svfres100-ta
+      - maglev-privateagent
+      - ns20ora100-ta
+      - ns20loco100-ta
   view:
-    active: mendixapp
+    active: v1/pods maglev-privateagent
   featureGates:
     nodeShell: false
   proxy: null

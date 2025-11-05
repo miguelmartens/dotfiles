@@ -1,15 +1,15 @@
 k9s:
-  cluster: AKS40LOCO100-P
+  cluster: AKS20CCMMAGLV100-DEV
   namespace:
-    active: nsco-agic
+    active: ns20loco100-ta
     lockFavorites: false
     favorites:
-      - ns40loco100-p
-      - nsco-agic
-      - nsco-monitoring
+      - ns20loco100-ta
+      - all
+      - backstage
       - default
   view:
-    active: context
+    active: contexts
   featureGates:
     nodeShell: false
   proxy: null

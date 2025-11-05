@@ -38,7 +38,6 @@ zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
-zinit snippet OMZP::docker
 zinit snippet OMZP::python
 zinit snippet OMZP::brew
 zinit snippet OMZP::golang
@@ -104,7 +103,8 @@ export K9S_CONFIG_DIR="$HOME/.config/k9s"
 # -------------------------------
 # Aliases
 # -------------------------------
-#alias cat='bat'                      # Use bat for syntax-highlighted cat
+#alias cat='bat'                     # Use bat for syntax-highlighted cat
+#alias find='fd'                     # Use fd for faster directory search
 alias ls="eza --icons=always"        # Use eza for better ls
 alias l="eza -l --icons --git -a"
 alias lt="eza --tree --level=2 --long --icons --git"
@@ -148,8 +148,19 @@ alias gh-push='gh repo sync && git push origin $(git rev-parse --abbrev-ref HEAD
 # -------------------------------
 # Docker and Podman Setup
 # -------------------------------
-export PODMAN_COMPOSE_PROVIDER=podman-compose
-alias docker='podman'
+# Ensure zinit completions directory exists
+mkdir -p ~/.cache/zinit/completions
+
+# Set up Docker completions
+if command -v docker >/dev/null 2>&1; then
+  # Create Docker completion file if it doesn't exist
+  if [ ! -f ~/.cache/zinit/completions/_docker ]; then
+    docker completion zsh > ~/.cache/zinit/completions/_docker 2>/dev/null || true
+  fi
+fi
+
+# export PODMAN_COMPOSE_PROVIDER=podman-compose
+# alias docker='podman'
 
 # ---------------------------------
 # JavaScript, Node.js, NVM and Bun Setup
@@ -218,3 +229,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/miguelm/.lmstudio/bin"
+# End of LM Studio CLI section

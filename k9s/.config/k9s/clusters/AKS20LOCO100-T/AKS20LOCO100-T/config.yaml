@@ -1,0 +1,17 @@
+k9s:
+  cluster: AKS20LOCO100-T
+  namespace:
+    active: all
+    lockFavorites: false
+    favorites:
+      - all
+      - ingress-basic
+      - ingress-nginx
+      - helloworld
+      - default
+      - ns20locot100-ta
+  view:
+    active: svc
+  featureGates:
+    nodeShell: false
+  proxy: null

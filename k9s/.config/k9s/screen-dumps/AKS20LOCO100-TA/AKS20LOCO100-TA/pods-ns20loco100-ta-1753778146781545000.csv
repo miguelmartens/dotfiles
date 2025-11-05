@@ -1,0 +1,2 @@
+NAMESPACE,NAME,VS,PF,READY,STATUS,RESTARTS,LAST RESTART,CPU,CPU/RL,%CPU/R,%CPU/L,MEM,MEM/RL,%MEM/R,%MEM/L,GPU/RL,IP,NODE,SERVICE-ACCOUNT,NOMINATED NODE,READINESS GATES,QOS,LABELS,VALID,AGE
+ns20loco100-ta,mendix-pdf-document-generation-fdbd6bd87-mb9s6,0,●,2/2,Running,0,<unknown>,1,2000:3000,0,0,100,4096:6144,2,1,0:0,10.41.145.232,aks-application-29440596-vmss00000a,default,<none>,<none>,BU,"app=mendix-pdf-document-generation,pod-template-hash=fdbd6bd87",,20m

@@ -1,15 +1,13 @@
 k9s:
-  cluster: AKS40LOCO100-P
+  cluster: kind-kind-cluster
   namespace:
-    active: nsco-agic
+    active: all
     lockFavorites: false
     favorites:
-      - ns40loco100-p
-      - nsco-agic
-      - nsco-monitoring
+      - all
       - default
   view:
-    active: context
+    active: kubernetes.m.crossplane.io/v1alpha1/objects all
   featureGates:
     nodeShell: false
   proxy: null

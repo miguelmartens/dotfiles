@@ -1,20 +1,20 @@
 k9s:
   cluster: AKS20LOCO100-P
   namespace:
-    active: ns20rrp100-p
+    active: maglev-monitoring
     lockFavorites: false
     favorites:
-      - ns20rrp100-p
-      - maglev-privateagent
-      - all
-      - ns20mcm100-p
-      - ns20ccmportal100-p
-      - ns20svfres100-p
-      - kube-system
+      - ns20mk100-p
+      - ns20sw100-p
+      - ns20locot100-p
+      - ns20baas100-p
+      - ns20loco100-p
+      - default
       - maglev-operations
-      - maglev-operator
+      - maglev-monitoring
+      - ns20rw100-p
   view:
-    active: pod ns20rrp100-p
+    active: contexts
   featureGates:
     nodeShell: false
   proxy: null
