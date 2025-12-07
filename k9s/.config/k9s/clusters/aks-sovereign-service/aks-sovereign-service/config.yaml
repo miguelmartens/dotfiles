@@ -1,15 +1,16 @@
 k9s:
-  cluster: AKS20CCMMAGLV100-DEV
+  cluster: aks-sovereign-service
   namespace:
     active: backstage
     lockFavorites: false
     favorites:
-      - all
+      - app-routing-system
+      - argocd
+      - cert-manager
       - backstage
       - default
-      - ns20loco100-ta
   view:
-    active: contexts
+    active: v1/pods backstage
   featureGates:
     nodeShell: false
   proxy: null

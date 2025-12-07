@@ -1,9 +1,10 @@
 k9s:
   cluster: AKS20LOCO100-P
   namespace:
-    active: maglev-monitoring
+    active: maglev-operations
     lockFavorites: false
     favorites:
+      - ns20ccmportal100-p
       - ns20mk100-p
       - ns20sw100-p
       - ns20locot100-p
@@ -12,7 +13,6 @@ k9s:
       - default
       - maglev-operations
       - maglev-monitoring
-      - ns20rw100-p
   view:
     active: contexts
   featureGates:

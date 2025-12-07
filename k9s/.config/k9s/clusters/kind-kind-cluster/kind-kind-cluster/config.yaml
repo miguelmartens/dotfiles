@@ -7,7 +7,7 @@ k9s:
       - all
       - default
   view:
-    active: kubernetes.m.crossplane.io/v1alpha1/objects all
+    active: contexts
   featureGates:
     nodeShell: false
   proxy: null
