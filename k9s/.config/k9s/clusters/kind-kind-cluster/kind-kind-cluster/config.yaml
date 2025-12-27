@@ -1,11 +1,14 @@
 k9s:
   cluster: kind-kind-cluster
   namespace:
-    active: all
+    active: maglev-dev
     lockFavorites: false
     favorites:
+      - maglev-dev
       - all
       - default
+      - maglev-api
+      - maglev
   view:
     active: contexts
   featureGates:

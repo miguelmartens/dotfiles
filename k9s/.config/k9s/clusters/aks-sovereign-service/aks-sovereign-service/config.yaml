@@ -10,7 +10,7 @@ k9s:
       - backstage
       - default
   view:
-    active: v1/pods backstage
+    active: contexts
   featureGates:
     nodeShell: false
   proxy: null

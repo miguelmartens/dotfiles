@@ -9,7 +9,7 @@ k9s:
       - default
       - ns20loco100-ta
   view:
-    active: contexts
+    active: v1/pods
   featureGates:
     nodeShell: false
   proxy: null

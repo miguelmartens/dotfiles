@@ -1,9 +1,11 @@
 k9s:
   cluster: AKS20LOCO100-TA
   namespace:
-    active: ns20rails100-ta
+    active: maglev-api
     lockFavorites: false
     favorites:
+      - maglev-privateagent
+      - maglev-api
       - ns20rails100-ta
       - all
       - kube-system
@@ -11,10 +13,8 @@ k9s:
       - ns20loco100-ta
       - maglev-operations
       - maglev-monitoring
-      - ns20spot100-ta
-      - nsco-monitoring
   view:
-    active: v1/namespaces
+    active: contexts
   featureGates:
     nodeShell: false
   proxy: null

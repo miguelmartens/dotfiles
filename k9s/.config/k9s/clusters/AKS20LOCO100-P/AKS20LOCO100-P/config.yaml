@@ -1,9 +1,11 @@
 k9s:
   cluster: AKS20LOCO100-P
   namespace:
-    active: maglev-operations
+    active: maglev-privateagent
     lockFavorites: false
     favorites:
+      - maglev-privateagent
+      - ns20obf100-p
       - ns20ccmportal100-p
       - ns20mk100-p
       - ns20sw100-p
@@ -11,10 +13,8 @@ k9s:
       - ns20baas100-p
       - ns20loco100-p
       - default
-      - maglev-operations
-      - maglev-monitoring
   view:
-    active: contexts
+    active: v1/pods maglev-privateagent
   featureGates:
     nodeShell: false
   proxy: null

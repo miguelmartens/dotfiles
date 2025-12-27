@@ -40,5 +40,6 @@
     },
     "vs-kubernetes": {
         "vs-kubernetes.crd-code-completion": "enabled"
-    }
+    },
+    "go.toolsManagement.autoUpdate": true
 }
