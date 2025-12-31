@@ -10,7 +10,7 @@ k9s:
       - maglev-api
       - maglev
   view:
-    active: contexts
+    active: v1/pods
   featureGates:
     nodeShell: false
   proxy: null

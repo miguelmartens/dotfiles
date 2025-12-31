@@ -1,3 +1,7 @@
+# Clear any leftover output from previous sessions or WezTerm
+# (This helps remove any text that might be printed before .zshrc loads)
+printf '\033[2K\r'  # Clear current line
+
 # -------------------------------
 # Homebrew Setup
 # -------------------------------
@@ -38,7 +42,6 @@ zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
-zinit snippet OMZP::python
 zinit snippet OMZP::brew
 zinit snippet OMZP::golang
 zinit snippet OMZP::command-not-found
@@ -200,27 +203,13 @@ alias gof="go fmt ./..."   # Format Go code in the current directory
 alias gov="go version"     # Print Go version
 alias goi="go install"     # Install the current package
 
-# -------------------------------
-# Python Setup (Pyenv and Pipenv)
-# -------------------------------
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"               # Initialize Pyenv
-
-# If you want pyenv and pipenv to automatically select the right environment
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init --path)"
-fi
-
-# Python Aliases
-alias pipfile="pipenv install"      # Install from Pipenv's Pipfile
-alias pyclean="find . -name '__pycache__' -delete"  # Clean Python caches
-export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 
 # -------------------------------
 # Rustup Setup
 # -------------------------------
 # Rustup
+export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # -------------------------------

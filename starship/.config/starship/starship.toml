@@ -13,7 +13,6 @@ $ruby\
 $crystal\
 $zig\
 $package\
-$aws\
 $azure\
 $openstack\
 $kubernetes\
@@ -57,7 +56,7 @@ symbol = ' '
 [python]
 style = 'teal'
 symbol = ' '
-format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+format = '[${symbol}${pyenv_prefix}(${version} )]($style)'
 pyenv_version_name = true
 pyenv_prefix = ''
 detect_files = ['requirements.txt', 'pyproject.toml', 'Pipfile', 'setup.py', '.python-version', 'tox.ini', 'setup.cfg']
@@ -99,14 +98,16 @@ symbol = '↯ '
 symbol = '󰏗 '
 
 [aws]
+disabled = true
 symbol = ' '
 style = 'yellow'
 format = '[$symbol($profile )(\[$duration\] )]($style)'
 
 [azure]
+disabled = false
 symbol = '󰠅 '
 style = 'blue'
-format = '[$symbol($subscription)]($style)'
+format = '[$symbol($subscription)]($style) '
 
 [openstack]
 symbol = '☁ '
@@ -114,6 +115,7 @@ style = 'yellow'
 format = '[$symbol$cloud( \($project\))]($style)'
 
 [kubernetes]
+disabled = false
 symbol = '☸ '
 style = 'blue'
 format = '[$symbol$context( \($namespace\))]($style)'
