@@ -14,6 +14,11 @@
     "light": "One Light",
     "dark": "Aura Dark",
   },
+  "theme_overrides": {
+    "Aura Dark": {
+      "border.variant": "#15141C",
+    },
+  },
   "icon_theme": "Warm Charmed Icons",
   // The name of a base set of key bindings to use.
   // This setting can take six values, each named after another
@@ -508,7 +513,7 @@
     //    "always"
     // 4. Never show the scrollbar:
     //    "never"
-    "show": "auto",
+    "show": "never",
     // Whether to show cursor positions in the scrollbar.
     "cursors": true,
     // Whether to show git diff indicators in the scrollbar.
@@ -603,7 +608,7 @@
     // Whether to show fold buttons in the gutter.
     "folds": true,
     // Minimum number of characters to reserve space for in the gutter.
-    "min_line_number_digits": 4,
+    "min_line_number_digits": 0,
   },
   "indent_guides": {
     // Whether to show indent guides in the editor.
@@ -753,7 +758,7 @@
       //    "always"
       // 5. Never show the scrollbar:
       //    "never"
-      "show": null,
+      "show": "never",
     },
     // Which files containing diagnostic errors/warnings to mark in the project panel.
     // This setting can take the following three values:
@@ -766,7 +771,7 @@
     //    "all"
     "show_diagnostics": "all",
     // Whether to stick parent directories at top of the project panel.
-    "sticky_scroll": true,
+    "sticky_scroll": false,
     // Settings related to indent guides in the project panel.
     "indent_guides": {
       // When to show indent guides in the project panel.
@@ -791,7 +796,7 @@
     // Whether to enable drag-and-drop operations in the project panel.
     "drag_and_drop": true,
     // Whether to hide the root entry when only one folder is open in the window.
-    "hide_root": false,
+    "hide_root": true,
     // Whether to hide the hidden entries in the project panel.
     "hide_hidden": false,
     // Settings for automatically opening files.
@@ -935,9 +940,9 @@
     // The default model to use when creating new threads.
     "default_model": {
       // The provider to use.
-      "provider": "zed.dev",
+      "provider": "copilot_chat",
       // The model to use.
-      "model": "claude-sonnet-4-5",
+      "model": "claude-sonnet-4.5",
     },
     // Additional parameters for language model requests. When making a request to a model, parameters will be taken
     // from the last entry in this list that matches the model's provider and name. In each entry, both provider
@@ -1250,7 +1255,7 @@
     //    "modal_max_width": "full"
     //
     // Default: small
-    "modal_max_width": "small",
+    "modal_max_width": "large",
     // Determines whether the file finder should skip focus for the active file in search results.
     // There are 2 possible values:
     //
@@ -1334,7 +1339,7 @@
   "hard_tabs": false,
   // How many columns a tab should occupy.
   "tab_size": 2,
-  // What debuggers are preferred by default for all languages.
+  // What debuggers are preferred by default for all lang1uages.
   "debuggers": [],
   // Whether to enable word diff highlighting in the editor.
   //
@@ -2419,8 +2424,8 @@
   // Configures agent servers available in the agent panel.
   "agent_servers": {
     "github-copilot": {
-      "type": "registry"
-    }
+      "type": "registry",
+    },
   },
   "debugger": {
     "stepping_granularity": "line",
