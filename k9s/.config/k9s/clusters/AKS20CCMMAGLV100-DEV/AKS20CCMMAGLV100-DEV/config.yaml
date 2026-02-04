@@ -1,15 +1,17 @@
 k9s:
   cluster: AKS20CCMMAGLV100-DEV
   namespace:
-    active: backstage
+    active: trivy-system
     lockFavorites: false
     favorites:
+      - trivy-system
+      - argocd
       - all
-      - backstage
       - default
+      - backstage
       - ns20loco100-ta
   view:
-    active: v1/pods
+    active: aquasecurity.github.io/v1alpha1/vulnerabilityreports trivy-system
   featureGates:
     nodeShell: false
   proxy: null
