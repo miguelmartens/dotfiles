@@ -18,7 +18,7 @@ help:
 
 .PHONY: stow-all
 stow-all:
-	stow */
+	stow --adopt */
 
 .PHONY: unstow-all
 unstow-all:
