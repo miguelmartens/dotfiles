@@ -30,7 +30,7 @@ config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 
 -- Window
-config.window_decorations = "RESIZE"
+config.window_decorations = "TITLE | RESIZE"
 config.window_background_opacity = 0.9
 config.window_close_confirmation = "NeverPrompt"
 config.window_frame = {
@@ -47,10 +47,10 @@ config.window_padding = {
 }
 
 -- Tab Bar
-config.use_fancy_tab_bar = true
+config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
-config.tab_bar_at_bottom = false
-config.hide_tab_bar_if_only_one_tab = true
+config.tab_bar_at_bottom = true
+config.hide_tab_bar_if_only_one_tab = false
 config.native_macos_fullscreen_mode = false
 config.tab_max_width = 25
 config.colors = {
