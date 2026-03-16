@@ -12,14 +12,9 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Aura Dark",
+    "dark": "One Dark",
   },
-  "theme_overrides": {
-    "Aura Dark": {
-      "border.variant": "#15141C",
-    },
-  },
-  "icon_theme": "Warm Charmed Icons",
+  "icon_theme": "Colored Zed Icons Theme Dark",
   // The name of a base set of key bindings to use.
   // This setting can take six values, each named after another
   // text editor:
@@ -32,10 +27,6 @@
   // 6. "TextMate"
   "base_keymap": "Cursor",
   // Features that can be globally enabled or disabled
-  "features": {
-    // Which edit prediction provider to use.
-    "edit_prediction_provider": "zed",
-  },
   // The name of a font to use for rendering text in the editor
   // ".ZedMono" currently aliases to Lilex
   // but this may change in the future.
@@ -922,6 +913,28 @@
   },
   "agent": {
     // Whether the inline assistant should use streaming tools, when available
+    "favorite_models": [
+      {
+        "provider": "zed.dev",
+        "model": "claude-sonnet-4-5",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "zed.dev",
+        "model": "claude-opus-4-6",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-sonnet-4.5",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "openai",
+        "model": "gpt-5.2-codex",
+        "enable_thinking": false,
+      },
+    ],
     "inline_assistant_use_streaming_tools": true,
     // Whether the agent is enabled.
     "enabled": true,
@@ -940,9 +953,11 @@
     // The default model to use when creating new threads.
     "default_model": {
       // The provider to use.
-      "provider": "copilot_chat",
+      "effort": "medium",
+      "enable_thinking": true,
+      "provider": "zed.dev",
       // The model to use.
-      "model": "claude-sonnet-4.5",
+      "model": "gpt-5.2-codex",
     },
     // Additional parameters for language model requests. When making a request to a model, parameters will be taken
     // from the last entry in this list that matches the model's provider and name. In each entry, both provider
@@ -972,13 +987,13 @@
     //
     // Note: This setting has no effect on external agents that support permission modes, such as Claude Code.
     //       You can set `agent_servers.claude.default_mode` to `bypassPermissions` to skip all permission requests.
-    "always_allow_tool_actions": true,
     // Per-tool permission rules for granular control over tool actions.
     // This setting only applies to the native Zed agent.
     "tool_permissions": {
+      "default": "allow",
       "tools": {
         "terminal": {
-          "default_mode": "confirm",
+          "default": "confirm",
           "always_deny": [
             // Dangerous rm commands
             { "pattern": "rm\\s+-rf\\s+(/|\\.\\.|\"|~|\\*)" },
@@ -1011,7 +1026,7 @@
           ],
         },
         "edit_file": {
-          "default_mode": "confirm",
+          "default": "confirm",
           "always_deny": [
             // Secrets and credentials
             { "pattern": "\\.env($|\\.)" },
@@ -1021,7 +1036,7 @@
           ],
         },
         "delete_path": {
-          "default_mode": "confirm",
+          "default": "confirm",
           "always_deny": [
             // System directories
             { "pattern": "^/etc" },
@@ -1043,7 +1058,7 @@
           ],
         },
         "fetch": {
-          "default_mode": "confirm",
+          "default": "confirm",
         },
       },
     },
@@ -1051,7 +1066,7 @@
     "single_file_review": true,
     // When enabled, show voting thumbs for feedback on agent edits.
     "enable_feedback": true,
-    "default_profile": "write",
+    "default_profile": "ask",
     "profiles": {
       "write": {
         "name": "Write",
@@ -1510,6 +1525,7 @@
     // Any addition to this list will be merged with the default list.
     // Globs are matched relative to the worktree root,
     // except when starting with a slash (/) or equivalent in Windows.
+    "provider": "zed",
     "disabled_globs": [
       "**/.env*",
       "**/*.pem",

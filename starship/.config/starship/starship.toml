@@ -26,10 +26,10 @@ $line_break\
 $character"""
 
 add_newline = true
-palette = 'nord'
+palette = 'zed'
 
 [directory]
-style = 'bold fg:dark_blue'
+style = 'bold fg:accent'
 format = '[$path ]($style)'
 truncation_length = 3
 truncation_symbol = '…/'
@@ -43,7 +43,7 @@ truncate_to_repo = false
 
 [git_branch]
 style = 'fg:green'
-symbol = ' '
+symbol = ' '
 format = '[on](white) [$symbol$branch ]($style)'
 
 [git_status]
@@ -137,7 +137,7 @@ format = '[$symbol($version )]($style)'
 
 [docker_context]
 symbol = ' '
-style = 'fg:#06969A'
+style = 'fg:teal'
 format = '[$symbol]($style) $path'
 detect_files = ['docker-compose.yml', 'docker-compose.yaml', 'Dockerfile']
 detect_extensions = ['Dockerfile']
@@ -153,6 +153,26 @@ min_time = 500
 style = 'fg:gray'
 format = '[$duration]($style)'
 
+[character]
+success_symbol = '[❯](bold fg:accent) '
+error_symbol = '[❯](bold fg:red) '
+
+# Zed One Dark palette (from Zed IDE theme)
+[palettes.zed]
+accent = '#74ade8'
+dark_blue = '#61afef'
+blue = '#56b6c2'
+teal = '#56b6c2'
+red = '#e06c75'
+green = '#98c379'
+purple = '#c678dd'
+cyan = '#56b6c2'
+orange = '#e5c07b'
+yellow = '#e5c07b'
+gray = '#636d83'
+white = '#abb2bf'
+black = '#282c34'
+
 [palettes.nord]
 dark_blue = '#5E81AC'
 blue = '#81A1C1'
@@ -164,17 +184,17 @@ yellow = '#EBCB8B'
 purple = '#B48EAD'
 gray = '#434C5E'
 black = '#2E3440'
-white='#D8DEE9'
+white = '#D8DEE9'
 
 [palettes.onedark]
-dark_blue='#61afef'
-blue='#56b6c2'
-red='#e06c75'
-green='#98c379'
-purple='#c678dd'
-cyan='#56b6c2'
-orange='#be5046'
-yellow='#e5c07b'
-gray='#828997'
-white ='#abb2bf'
-black='#2c323c'
+dark_blue = '#61afef'
+blue = '#56b6c2'
+red = '#e06c75'
+green = '#98c379'
+purple = '#c678dd'
+cyan = '#56b6c2'
+orange = '#be5046'
+yellow = '#e5c07b'
+gray = '#828997'
+white = '#abb2bf'
+black = '#2c323c'

@@ -9,7 +9,7 @@ k9s:
       - nsco-monitoring
       - default
   view:
-    active: context
+    active: privatecloud.mendix.com/v1alpha1/mendixapps nsco-agic
   featureGates:
     nodeShell: false
   proxy: null

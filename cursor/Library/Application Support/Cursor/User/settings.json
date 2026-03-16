@@ -2,7 +2,6 @@
     "window.commandCenter": true,
     "git.openRepositoryInParentFolders": "never",
     "workbench.iconTheme": "catppuccin-mocha",
-    "workbench.colorTheme": "Catppuccin Mocha",
     "github.copilot.enable": {
         "*": false,
         "plaintext": false,
@@ -39,7 +38,10 @@
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "vs-kubernetes": {
-        "vs-kubernetes.crd-code-completion": "enabled"
+        "vs-kubernetes.crd-code-completion": "enabled",
+        "vscode-kubernetes.helm-path-mac": "/Users/miguelm/.vs-kubernetes/tools/helm/darwin-arm64/helm",
+        "vscode-kubernetes.kubectl-path-mac": "/Users/miguelm/.vs-kubernetes/tools/kubectl/kubectl",
+        "vscode-kubernetes.minikube-path-mac": "/Users/miguelm/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
     },
     "go.toolsManagement.autoUpdate": true
 }

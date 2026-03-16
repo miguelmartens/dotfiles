@@ -203,14 +203,21 @@ alias gof="go fmt ./..."   # Format Go code in the current directory
 alias gov="go version"     # Print Go version
 alias goi="go install"     # Install the current package
 
+# -------------------------------
+# Python Setup
+# -------------------------------
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
 
 # -------------------------------
 # Rustup Setup
 # -------------------------------
 # Rustup
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
-
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# ESP toolchain
+source ~/export-esp.sh
 
 # -------------------------------
 # LLVM Setup (Homebrew)

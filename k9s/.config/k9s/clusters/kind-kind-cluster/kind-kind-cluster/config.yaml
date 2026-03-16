@@ -1,16 +1,20 @@
 k9s:
   cluster: kind-kind-cluster
   namespace:
-    active: maglev-dev
+    active: crossplane-system
     lockFavorites: false
     favorites:
-      - maglev-dev
+      - kyverno
+      - trivy-system
+      - flux-system
+      - crossplane-system
+      - kube-system
       - all
       - default
-      - maglev-api
-      - maglev
+      - dapr-system
+      - argocd
   view:
-    active: contexts
+    active: v1/namespaces
   featureGates:
     nodeShell: false
   proxy: null

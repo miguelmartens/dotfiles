@@ -1,18 +1,18 @@
 k9s:
   cluster: AKS20LOCO100-P
   namespace:
-    active: ns20rw100-p
+    active: kube-system
     lockFavorites: false
     favorites:
-      - ns20rv100-p
-      - ns20loco100-p
-      - maglev-operations
-      - ns20rw100-p
-      - maglev-operator
-      - ns20rrp100-p
-      - maglev-privateagent
-      - ns20obf100-p
+      - kube-system
+      - flux-system
+      - ns20rpt100-p
+      - ns20gvo100-p
+      - ns20rit100-p
+      - ns20vsmv100-p
       - ns20ccmportal100-p
+      - ns20hijr100-p
+      - ns20rv100-p
   view:
     active: contexts
   featureGates:

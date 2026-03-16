@@ -1,17 +1,20 @@
 k9s:
   cluster: AKS20CCMMAGLV100-DEV
   namespace:
-    active: trivy-system
+    active: flux-system
     lockFavorites: false
     favorites:
+      - crossplane-system
       - trivy-system
-      - argocd
+      - gatekeeper-system
+      - flux-system
+      - tigera-operator
+      - calico-system
       - all
-      - default
-      - backstage
-      - ns20loco100-ta
+      - kube-system
+      - kyverno
   view:
-    active: aquasecurity.github.io/v1alpha1/vulnerabilityreports trivy-system
+    active: contexts
   featureGates:
     nodeShell: false
   proxy: null
